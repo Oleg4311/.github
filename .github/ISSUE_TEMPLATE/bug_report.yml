@@ -1,0 +1,31 @@
+name: Ошибка
+description: Что-то работает не так, как описано
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Что произошло
+      description: И что вы ожидали увидеть вместо этого
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Как воспроизвести
+      description: Шаги, команда или входные данные (без секретов и личных данных)
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Версия
+      description: Версия релиза или коммит
+  - type: input
+    id: env
+    attributes:
+      label: Окружение
+      description: ОС, версия Node.js / Go / Python, браузер
